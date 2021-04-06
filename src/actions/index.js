@@ -25,7 +25,8 @@ export const userLogin = (data) => async (dispatch) => {
     dispatch({ type: LOG_IN, payload: res.data });
     history.push("/adminpanel");
   } catch (error) {
-    dispatch({ type: LOG_IN_ERROR, payload: error.response.data });
+    console.log(error);
+    // dispatch({ type: LOG_IN_ERROR, payload: error.response.data });
     setTimeout(() => {
       dispatch({ type: LOG_IN_ERROR, payload: null });
     }, 5000);

@@ -20,7 +20,6 @@ const LoginPage = (props) => {
     props.userLogin(data);
     e.target.reset();
   };
-  console.log(props.login.error);
   return (
     <div className="login__page">
       <div className="login_bg_image">
