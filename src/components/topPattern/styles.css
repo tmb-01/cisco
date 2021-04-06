@@ -1,0 +1,16 @@
+
+.top_pattern {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: unset;
+  z-index: -5;
+}
+
+.top_pattern img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

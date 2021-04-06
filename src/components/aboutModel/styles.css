@@ -1,0 +1,177 @@
+.aboutModel {
+  display: none;
+  background: #F1F4FF;
+  padding-bottom: 100px;
+}
+
+.aboutModel .ml-auto {
+  margin-left: auto;
+}
+
+.aboutModel .modelName {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #323232;
+  margin-bottom: 30px;
+}
+
+.aboutModel .modelName span {
+  color: #7598FF;
+}
+
+.aboutModel .tab_buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.aboutModel .tab_buttons:before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #7598FF;
+}
+
+.aboutModel .tab_buttons button {
+  outline: none;
+  background: none;
+  border: none;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  color: #666666;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.aboutModel .tab_buttons button:before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #7598FF;
+  z-index: 5;
+}
+
+.aboutModel .tab_buttons button.active {
+  font-weight: bold;
+  color: #323232;
+}
+
+.aboutModel .tab_buttons button.active:before {
+  background: #7598FF;
+}
+
+.aboutModel .tab_content {
+  display: none;
+}
+
+.aboutModel .tab_content.active {
+  display: block;
+}
+
+.aboutModel .tab_content .modelDesc {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.aboutModel .tab_content .line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #666666;
+  margin-bottom: 20px;
+}
+
+.aboutModel .tab_content .line .half {
+  width: 50%;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #666666;
+}
+
+.aboutModel .tab_content .line .half:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  color: #7598FF;
+}
+
+.aboutModel .tab_content .descs .li {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #666666;
+}
+
+.aboutModel .tab_content .descs .li span {
+  display: inline-block;
+  min-width: 5px;
+  max-width: 5px;
+  height: 5px;
+  background: #666666;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.aboutModel .image img {
+  width: 100%;
+  max-height: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.aboutModel .buyBtn {
+  background: #7598FF;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 270px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 auto;
+}

@@ -1,0 +1,152 @@
+.pointsOfSales .closeBtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  background: none;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+
+.pointsOfSales .closeBtn img {
+  width: 30px;
+  height: 30px;
+  margin-top: 120px;
+  margin-right: 150px;
+
+}
+
+.pointsOfSales .sectionTitle {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #323232;
+  margin-bottom: 5px;
+}
+@media(max-width: 768px){
+  .pointsOfSales .sectionTitle{
+    font-size: 30px;
+  }
+}
+@media(max-width: 350px){
+  .pointsOfSales .sectionTitle{
+    font-size: 25px;
+  }
+}
+.pointsOfSales .sectionSubtitle {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  color: #666666;
+  margin-bottom: 50px;
+}
+.pointsOfSales .row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 0;
+}
+.pointsOfSales .col-12 {
+  margin-bottom: 20px;
+}
+
+.pointsOfSales .box {
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px;
+  -webkit-transition: -webkit-box-shadow .3s ease;
+  transition: -webkit-box-shadow .3s ease;
+  -o-transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.pointsOfSales .box:hover {
+  -webkit-box-shadow: 5px 5px 50px rgba(22, 37, 80, 0.25);
+          box-shadow: 5px 5px 50px rgba(22, 37, 80, 0.25);
+}
+
+.pointsOfSales .box .logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+
+}
+
+.pointsOfSales .box .logo img {
+  width: 100%;
+}
+
+.pointsOfSales .box a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  color: #7598FF;
+  text-decoration: none;
+}
+
+.pointsOfSales .box a img {
+  margin-left: 5px;
+  width: 8px;
+}
+
+.pointsOfSales .box .seller {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #323232;
+  margin-bottom: 10px;
+}
+
+.pointsOfSales .box .sellerDesc {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.pointsOfSales .box .phone {
+  margin-bottom: 30px;
+}
+
+.pointsOfSales .box .phone:last-child {
+  margin-bottom: 0;
+}
+
+.pointsOfSales .box h4 {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #666666;
+  margin-bottom: 5px;
+}
+
+.pointsOfSales .box h3 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3E3E3E;
+}
