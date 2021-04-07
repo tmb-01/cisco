@@ -6,8 +6,6 @@ const ProtectedRouter = ({
   login: { isAuthenticate, isLoading },
   ...rest
 }) => {
-  console.log(isAuthenticate);
-  console.log(isLoading);
   return (
     <Route
       {...rest}
