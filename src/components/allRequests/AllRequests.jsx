@@ -1,31 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getAllRequest } from "../../actions";
-import Logo from "../../assets/img/logo.svg";
-import axios from "axios";
+import { useHistory } from "react-router-dom";
 import "./styles.css";
-const AdminPanel = (props) => {
+const AllRequests = (props) => {
+  const history = useHistory();
   useEffect(() => {
     props.getAllRequest();
   }, []);
   return (
     <div className="adminPanel">
-      <div className="sidebar">
-        <div className="sidebar__logo">
-          <a href="/">
-            <img src={Logo} alt="Logo" />
-          </a>
-        </div>
-        <div className="sidebar__nav">
-          <div className="sidebar__title">Home</div>
-          <div className="nav">
-            <a href="#/" className="active">
-              Заявки
-            </a>
-          </div>
-        </div>
-      </div>
       <div className="main">
         <div className="statistics">
           <div className="row">
@@ -50,17 +35,6 @@ const AdminPanel = (props) => {
             <div className="row">
               <div className="col-md-6">
                 <h1 className="content__title">Заявки</h1>
-              </div>
-              <div className="col-md-6">
-                <form>
-                  <input type="date" className="input__date form-admin" />
-                  <button type="submit" className="search__btn form-admin">
-                    Поиск
-                  </button>
-                  <button type="reset" className="reset__btn form-admin">
-                    Очистить
-                  </button>
-                </form>
               </div>
             </div>
           </div>
@@ -103,4 +77,4 @@ const mapStateToProps = (state) => {
   return { allData: state.userRequest };
 };
 
-export default connect(mapStateToProps, { getAllRequest })(AdminPanel);
+export default connect(mapStateToProps, { getAllRequest })(AllRequests);
