@@ -1,19 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.css'
+import {useHistory} from "react-router-dom"
 import RV160W from '../../assets/img/RV160W-E-K9-G5_1.png'
+import { Text } from '../../containers/languages';
 
 const AboutModel = () => {
+  
+  const history = useHistory();
+  const [description, setDescription] = useState(true)
+  const [characteristics, setCharacteristics] = useState(true)
+  const [features, setFeatures] = useState(true)
+
+  const handleDescription = ()=>{
+    setDescription(false)
+  }
+  const handleCharacteristics = ()=>{
+    setCharacteristics(false)
+  }
+  const handleFeatures = ()=>{
+    setFeatures(false)
+  }
   return(
-    <section className="aboutModel">
+    <div className="aboutModel">
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-6 col-lg-5">
               <div className="text">
                 <div className="modelName">Устройство: <span /></div>
                 <div className="tab_buttons">
-                  <button className="active" data-tab-open="description">Описание</button>
-                  <button data-tab-open="characteristics">Характеристики</button>
-                  <button data-tab-open="features">Особенности</button>
+                  <button className="active" onClick={handleDescription} data-tab-open="description">Описание</button>
+                  <button data-tab-open="characteristics" onClick={handleCharacteristics} >Характеристики</button>
+                  <button data-tab-open="features" onClick={handleFeatures} >Особенности</button>
                 </div>
                 <div className="tab_contents">
                   <div className="tab_content active" data-tab="description">
@@ -138,11 +155,13 @@ const AboutModel = () => {
               <div className="image">
                 <img src={RV160W} alt="RV160W" />
               </div>
-              <a href="#/" className="buyBtn">Где купить</a>
+              <a href="/pointofsales" onClick={() => history.push('/pointofsales')} className="buyBtn"><Text tid="modelbuyBtn" /></a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+     
   )
 }
+//DRY-DO Not Repeat yourself
 export default AboutModel;

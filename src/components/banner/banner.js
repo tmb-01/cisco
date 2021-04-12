@@ -5,28 +5,45 @@ import WAP125 from '../../assets/img/WAP125-E-K9-EU_1.png';
 import SF110D from '../../assets/img/SF110D-08HP_1.png';
 import SG1101 from '../../assets/img/SG110-16HP_1.png';
 import SG110 from '../../assets/img/SG110-16HP_2.png';
+import Slider from "react-slick";
 
 import { Text } from '../../containers/languages';
 
 const Banner = () => {
- 
+  const settings =({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },    
+    ]
+  });
     return(
 
       <section className="banner">
-        <div className="container" >
-        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-            <img className="banner-img" src={RV160W} alt="RV160W" />
-            <h1 className="router_name"><Text tid="router_nameRV160" /></h1>
-          </div>
-          <div className="carousel-item">
-            <img className="banner-img" src={WAP125} alt="WAP125" />
-            <h1 className="router_name"><Text tid="router_nameWAP125" /></h1>
+        <div className="container1" >
+        <Slider className="aa" {...settings}>
+          <div>
+           <img className="banner-img" src={RV160W} alt="RV160W" />
+            <h1 className="router_name"><Text tid="router_nameRV160W" /></h1>
           </div>
           <div className="carousel-item">
             <img className="banner-img" src={SF110D} alt="SF110D" />
             <h1 className="router_name"><Text tid="router_nameSF110D" /></h1>
+          </div>
+          <div className="carousel-item">
+            <img className="banner-img" src={WAP125} alt="WAP125" />
+            <h1 className="router_name"><Text tid="router_nameWAP125" /></h1>
           </div>
           <div className="carousel-item">
             <img className="banner-img" src={SG1101} alt="SG110" />
@@ -36,17 +53,8 @@ const Banner = () => {
             <img className="banner-img" src={SG110} alt="SG110" />
             <h1 className="router_name"><Text tid="router_nameSF110-24" /></h1>
           </div>
-          </div>
-      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-      </div>
-        <div className="desc">
+            </Slider>
+        <div className="banner-titlebox">
           <h1 className="banner_title"><Text tid="banner_title" /></h1>
           <h3 className="banner_subtitle">
             <Text tid="banner_subtitle" />
@@ -55,9 +63,6 @@ const Banner = () => {
         </div>
       </div>
     </section>
-
-    
   )
-  
 }
 export default Banner;

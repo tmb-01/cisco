@@ -4,23 +4,21 @@
   border: none;
   outline: none;
   font-weight: 800;
+  font-size: 14px;
+  font-weight: 500;
 }
-.language-option{
+.language-selector option{
   background: transparent;
   outline: none;
   border: none;
   color: black;
   padding: 3px 10px;
   margin: 0 auto;
-
+  border-radius: 10px;
 }
 @media(max-width: 992px){
   .language-selector{
-    background-color: black;
-  }
-}
-@media(max-width: 992px){
-  .language-option{
-    background-color: black;
+    margin: 30px;
+
   }
 }

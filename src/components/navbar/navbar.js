@@ -65,6 +65,7 @@ const Navbar2 = () => {
     <div>
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
+             <LanguageSelector />
           <Button className="button" onClick={toggleDrawer(anchor, true)}>
             <i className="fas fa-bars" onClick={toggleDrawer(anchor, true)}></i>
           </Button>
@@ -122,54 +123,3 @@ const Navbar3 = () => {
 };
 
 export default Navbar3;
-
-// import React from 'react';
-// import './styles.css';
-
-// import Logo from '../../assets/img/logo.svg'
-
-// const Navbar = () => {
-//   return(
-
-// <nav>
-//   <input type="checkbox" id="check" />
-//     <label for="check" className="checkbtn">
-//       <i className="fas fa-bars"></i>
-//     </label>
-//   <div className="logo">
-//     <a href="#">
-//       <img src={Logo} alt="Logo" />
-//     </a>
-//   </div>
-//   <ul>
-//     <li><a href="#forYourBusiness">Для вашего бизнеса</a></li>
-//     <li><a href="#models">Модели</a></li>
-//     <li><a href="#footer">Контакты</a></li>
-//   </ul>
-// </nav>
-
-// <div id="header" className="header">
-//     <div className="container">
-//       <div className="logo">
-//         <a href="#">
-//           <img src={Logo} alt="Logo" />
-//         </a>
-//       </div>
-//       <div className="navbar-links">
-//         <nav>
-//           <a href="#forYourBusiness">Для вашего бизнеса</a>
-//           <a href="#models">Модели</a>
-//           <a href="#footer">Контакты</a>
-//         </nav>
-//         <div className="menuIcon">
-//           <span />
-//           <span />
-//           <span />
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-
-//   )
-// }
-// export default Navbar;
