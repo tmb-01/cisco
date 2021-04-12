@@ -4,7 +4,7 @@ import Card from "../card/Card";
 const AddPointOfSales = () => {
   return (
     <GridComponet>
-      <Card />
+      <Card BtnText="Cохранить" />
     </GridComponet>
   );
 };

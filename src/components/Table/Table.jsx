@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getAllShops, deleteShop } from "../../actions";
+import {
+  getAllShops,
+  deleteShop,
+  editShops,
+  getCurrentShop,
+} from "../../actions";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -45,6 +50,9 @@ const TableUsers = (props) => {
   const handleDelete = (id) => {
     props.deleteShop(id);
   };
+  const handleEdit = (id) => {
+    props.getCurrentShop(id);
+  };
   return (
     <>
       <TableContainer component={Paper}>
@@ -70,9 +78,12 @@ const TableUsers = (props) => {
                 <TableCell align="right">{row.location}</TableCell>
                 <div className={classes.btnbox}>
                   <Button
+                    component={Link}
+                    to={`/edit-point-of-sales-shops/${row._id}`}
                     className={classes.btn}
                     variant="outlined"
                     color="primary"
+                    onClick={() => handleEdit(row._id)}
                   >
                     Редактировать
                   </Button>
@@ -93,7 +104,7 @@ const TableUsers = (props) => {
       <div className={classes.AddBtnBox}>
         <Link
           className={classes.AddBtn}
-          to="/adminaddmodel"
+          to="/admin-add-shops"
           component={Button}
           variant="contained"
           color="primary"
@@ -107,6 +118,9 @@ const TableUsers = (props) => {
 const mapStateToProps = (state) => {
   return { allData: state.shops };
 };
-export default connect(mapStateToProps, { getAllShops, deleteShop })(
-  TableUsers
-);
+export default connect(mapStateToProps, {
+  getAllShops,
+  deleteShop,
+  editShops,
+  getCurrentShop,
+})(TableUsers);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import Paper from "@material-ui/core/Paper";
 import Input from "@material-ui/core/Input";
-import { addShops } from "../../actions";
+import { editShops, getCurrentShop } from "../../actions";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
@@ -18,34 +18,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Card = (props) => {
-  const classes = useStyles();
-  const [postImage, setPostImage] = useState(null);
-  const handleChange = (e) => {
-    console.log(e.target);
-    if (e.target.name === "image") {
-      setPostImage(e.target.files[0]);
-      console.log(e.target.files);
-    }
-  };
-
+  useEffect(() => {
+    props.getCurrentShop();
+  }, []);
   const { control, handleSubmit } = useForm();
+  const classes = useStyles();
+  console.log(props.shops);
   const onSubmit = (data) => {
-    const fd = new FormData();
-    fd.append("photo", postImage);
-    fd.append("shopName", data.shopName);
-    fd.append("description", data.description);
-    fd.append("number", data.number);
-    fd.append("url", data.url);
-    fd.append("location", data.location);
-    props.addShops(fd);
+    props.editShops(data, props.shops.shop._id);
   };
-
   return (
     <Paper className={classes.root} elevation={8}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           control={control}
-          defaultValue=""
+          defaultValue="Shorda qiymat galama"
           name="shopName"
           render={({ field }) => (
             <TextField
@@ -123,4 +110,6 @@ const Card = (props) => {
   );
 };
 
-export default connect(null, { addShops })(Card);
+const mapStateToProps = (state) => ({ shops: state.shops });
+
+export default connect(mapStateToProps, { editShops, getCurrentShop })(Card);

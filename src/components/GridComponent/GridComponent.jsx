@@ -17,7 +17,7 @@ const GridComponent = (props) => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid item xs={0} sm={3}></Grid>
+      <Grid item xs="fales" sm={3}></Grid>
       <Grid container item className={classes.root} xs={12} md={8} lg={8}>
         {props.children}
       </Grid>

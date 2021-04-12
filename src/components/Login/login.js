@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import "./styles.css";
 
 const LoginPage = (props) => {
-  const history = useHistory();
   const [error, setError] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,7 +62,7 @@ const LoginPage = (props) => {
             <label htmlFor="rememberMe">Запомнить меня</label>
           </div>
           <div className="loginbtn">
-            <button type="submit" to="/adminpanel">
+            <button type="submit" to="/admin-panel">
               Войти
             </button>
           </div>

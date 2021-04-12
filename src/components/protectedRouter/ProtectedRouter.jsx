@@ -6,19 +6,15 @@ const ProtectedRouter = ({
   login: { isAuthenticate, isLoading },
   ...rest
 }) => {
+  const token = localStorage.getItem("token");
   return (
     <Route
       {...rest}
       render={(props) =>
-        !isAuthenticate && isLoading ? (
-          <Redirect
-            to={{
-              pathname: "/admin",
-              state: { from: props.location },
-            }}
-          />
-        ) : (
+        isAuthenticate || (token !== "" && token) ? (
           <Component {...props} />
+        ) : (
+          <Redirect to="/admin" />
         )
       }
     />

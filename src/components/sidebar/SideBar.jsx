@@ -15,11 +15,11 @@ const AdminSideBar = () => {
       <div className={classes.sidebar__nav}>
         <div className={classes.sidebar__title}>Home</div>
         <div className={classes.nav}>
-          <Link to="/adminpanel" className={classes.active}>
+          <Link to="/admin-panel" className={classes.active}>
             Заявки
           </Link>
-          <Link to="/adminpointofsales">Точки продаж</Link>
-          <Link to="/adminaddmodel">Продукция</Link>
+          <Link to="/admin-point-of-sales">Точки продаж</Link>
+          <Link to="/our-products">Продукция</Link>
           <Link to="/adminmediafile">Медиафайли</Link>
         </div>
       </div>
