@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import './styles.css'
 import {useHistory} from "react-router-dom"
-import RV160W from '../../assets/img/RV160W-E-K9-G5_1.png'
-import { Text } from '../../containers/languages';
+import WAP125 from '../../../assets/img/WAP125-E-K9-EU_1.png';
+import { Text } from '../../../containers/languages';
 import {Link} from 'react-router-dom'
 
 const AboutModel = () => {
@@ -36,80 +35,78 @@ const AboutModel = () => {
                 <div className="tab_contents">
                   <div className="tab_content active" data-tab="description">
                     <div className="modelDesc">
-                      Маршрутизаторы Cisco RV160 и RV160W VPN –
-                      это высокопроизводительные модели, которые
-                      сочетают в себе функции бизнес-класса с безопасностью,
-                      надежностью и общей стоимостью.
+                    Двухдиапазонная настольная точка доступа Cisco WAP125 Wireless-AC с PoE обеспечивает простую, экономичную и безопасную беспроводную сеть для ваших сотрудников и гостей, чтобы они могли иметь наилучший опыт оставаться на связи в любом месте офиса
                     </div>
                     <div className="lines">
                       <div className="line">
                         <div className="half">
-                          VPN
+                        Поддержка VLAN   
                         </div>
                         <div className="half">
-                          есть
-                        </div>
-                      </div>
-                      <div className="line">
-                        <div className="half">
-                          Максимальное количество гостей
-                        </div>
-                        <div className="half">
-                          50
+                        да
                         </div>
                       </div>
                       <div className="line">
                         <div className="half">
-                          Wi-Fi
+                        IPv6
                         </div>
                         <div className="half">
-                          есть
+                        да
                         </div>
                       </div>
                       <div className="line">
                         <div className="half">
-                          LTE
+                        WPA/WPA2
                         </div>
                         <div className="half">
-                          есть
+                        да
+                        </div>
+                      </div>
+                      <div className="line">
+                        <div className="half">
+                        Обнаружение мошеннических точек доступа
+                        </div>
+                        <div className="half">
+                        да
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="tab_content" data-tab="characteristics">
+                  <div className="modelDesc">
+                  Маршрутизаторы Cisco RV160 и RV160W VPN – это высокопроизводительные модели, которые сочетают в себе функции бизнес-класса с безопасностью, надежностью и общей стоимостью.
+                    </div>
                     <div className="lines">
                       <div className="line">
                         <div className="half">
-                          Ethernet WAN
+                        Стандарты
                         </div>
                         <div className="half">
-                          1 комбинированный порт
-                          Gigabit Ethernet SFP RJ-45
-                        </div>
-                      </div>
-                      <div className="line">
-                        <div className="half">
-                          Ethernet LAN
-                        </div>
-                        <div className="half">
-                          4 гигабитных порта
-                          Ethernet RJ-45
+                        IEEE 802.11 ac, 802.11 n, 802.11 g, 802.11 b, 802.3 af, 802.3 u, 802.1 X, 802.1 Q (VLAN), 802.1 D, 802.11 i, 802.11 e, IPv4/6
                         </div>
                       </div>
                       <div className="line">
                         <div className="half">
-                          Консольный порт
+                        Антенны
                         </div>
                         <div className="half">
-                          1 порт RJ-45
+                        Внутренние антенны оптимизированы для установки на рабочий стол
                         </div>
                       </div>
                       <div className="line">
                         <div className="half">
-                          Тип кабеля
+                        Светодиодные индикаторы
                         </div>
                         <div className="half">
-                          Категория 5 или лучше
+                        1 многофункциональный светодиод
+                        </div>
+                      </div>
+                      <div className="line">
+                        <div className="half">
+                        Тип кабеля
+                        </div>
+                        <div className="half">
+                        Категория 5 или лучше
                         </div>
                       </div>
                       <div className="line">
@@ -126,26 +123,32 @@ const AboutModel = () => {
                     <div className="descs">
                       <div className="li">
                         <span />
-                        RV160 обеспечивает проводное подключение
+                          • Обеспечивает экономичное подключение 802.11 ac/n
+                          (частота 2,4 и 5 ГГц), скоростью до 867 Мбит/с
                       </div>
                       <div className="li">
                         <span />
-                        RV160W-это беспроводной VPN-маршрутизатор
-                        с беспроводной связью 2x2 802.11 ac
+                          • Интерфейс Gigabit Ethernet LAN с питанием через
+                          Ethernet (PoE) обеспечивает гибкую установку
                       </div>
                       <div className="li">
                         <span />
-                        Гибкие комбинированные WAN-порты SFP/RJ-45
+                          • Безопасный гостевой Wi-Fi доступ с поддержкой
+                          3-х сторонних облачных управляемых гостевых Wi-Fi сервисов
                       </div>
                       <div className="li">
                         <span />
-                        Родной 4-портовый коммутатор
+                        • Работает прямо из коробки с легкой установкой
                       </div>
                       <div className="li">
                         <span />
-                        Высокопроизводительные гигабитные порты
-                        Ethernet, обеспечивающие передачу больших
-                        файлов и поддержку нескольких пользователей
+                          • Интеграция Cisco Umbrella для защиты беспроводных
+                          устройств от вредоносных программ и фишинга
+                      </div>
+                      <div className="li">
+                        <span />
+                          • Поддерживается новой платформой сетевого управления
+                          Cisco ® FindIT для легкого управления и контроля
                       </div>
                     </div>
                   </div>
@@ -154,7 +157,7 @@ const AboutModel = () => {
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 ml-auto">
               <div className="image">
-                <img src={RV160W} alt="RV160W" />
+                <img src={WAP125} alt="WAP125" />
               </div>
               <Link onClick={() => history.push('/pointofsales')} className="buyBtn"><Text tid="modelbuyBtn" /></Link>
             </div>

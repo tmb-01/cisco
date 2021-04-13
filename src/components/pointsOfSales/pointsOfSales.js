@@ -5,7 +5,7 @@ import MediaPark from '../../assets/img/mediapark_logo.svg'
 import ArrowRight from '../../assets/img/Arrow_right.svg'
 import Texnomart from '../../assets/img/texnomart_logo.svg'
 import Olcha from '../../assets/img/olcha_logo.svg'
-import {useHistory} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 
 const PointOfSales = () => {
   const history = useHistory();
@@ -21,7 +21,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={MediaPark} alt="MediaPark" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Media park</div>
                 <div className="sellerDesc">
                   Интернет магазин бытовой техники
@@ -44,7 +44,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={Texnomart} alt="Texnomart" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Texnomart</div>
                 <div className="sellerDesc">
                   Лидирующая сеть розничных магазинов
@@ -67,7 +67,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={Olcha} alt="Olcha" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Olcha</div>
                 <div className="sellerDesc">
                   Современный онлайн-магазин который радует
@@ -90,7 +90,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={MediaPark} alt="MediaPark" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Media park</div>
                 <div className="sellerDesc">
                   Интернет магазин бытовой техники
@@ -113,7 +113,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={Texnomart} alt="Texnomart" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Texnomart</div>
                 <div className="sellerDesc">
                   Лидирующая сеть розничных магазинов
@@ -136,7 +136,7 @@ const PointOfSales = () => {
                 <div className="logo">
                   <img src={Olcha} alt="Olcha" />
                 </div>
-                <a href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></a>
+                <Link href="#/">На сайт <img src={ArrowRight} alt="ArrowRight" /></Link>
                 <div className="seller">Olcha</div>
                 <div className="sellerDesc">
                   Современный онлайн-магазин который радует

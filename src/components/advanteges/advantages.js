@@ -4,6 +4,7 @@ import Shield from '../../assets/img/Shield_icon.svg'
 import Analytics from '../../assets/img/Analytics_icon.svg'
 import Settings from '../../assets/img/Settings_icon.svg'
 import arrowDown from '../../assets/img/arrowDown.svg'
+import { Link } from "react-router-dom";
 
 import { Text } from '../../containers/languages';
 

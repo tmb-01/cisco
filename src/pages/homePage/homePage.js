@@ -18,8 +18,9 @@ const homePage = () => {
       <Banner />
       <Advantages />
       <Configurations />
-      <Models />
-      <AboutModel />
+      <Models >
+        <AboutModel />
+      </Models>
       <Form />
       <Footer />
     </div>

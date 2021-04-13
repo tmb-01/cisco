@@ -1,5 +1,4 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import SideBar from "../../components/sidebar/SideBar";
 import AllRequests from "../../components/allRequests/AllRequests";
 import ProtectedRouter from "../../components/protectedRouter/ProtectedRouter";

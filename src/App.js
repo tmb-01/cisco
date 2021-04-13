@@ -10,7 +10,7 @@ import { currentAdmin } from "./actions";
 import loginPage from "../src/pages/login/loginPage";
 import homePage from "./pages/homePage/homePage";
 import AdminPanelPage from "./pages/admin_panel/adminPanelPage";
-import ProtectedRouter from "./components/protectedRouter/ProtectedRouter";
+import PointsOfSales from "../src/components/pointsOfSales/pointsOfSales";
 
 import "./App.css";
 
@@ -28,6 +28,7 @@ const App = (props) => {
           <Switch>
             <Route exact path="/" component={homePage} />
             <Route exact path="/admin" component={loginPage} />
+            <Route exact path="/pointofsales" component={PointsOfSales} />
             <AdminPanelPage />
           </Switch>
         </div>
